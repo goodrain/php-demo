@@ -1,8 +1,11 @@
 <?php
+session_id("19216821213c65cedec65b0883238c278eeb573e077");
 session_start();
 if (!isset($_SESSION['session_time'])) {   
     $_SESSION['session_time'] = time();
 }
+$memcache = memcache_connect($_ENV['MEMCACHED_HOST'], $_ENV['MEMCACHED_PORT']);  
+$memcache->set('memcache', 'hello memcache');  
 ?>
 
 <!DOCTYPE html>
@@ -102,8 +105,12 @@ if (!isset($_SESSION['session_time'])) {
                 <td><?php echo date("Y-m-d h:i:s",time()) ?></td>
               </tr>
               <tr>
-                <td>session_id</td>
-                <td><?php echo session_id() ?></td>
+                <td>session_info</td>
+                <td><?php echo $memcache->get('19216821213c65cedec65b0883238c278eeb573e077') ?></td>
+              </tr>
+              <tr>
+                <td>从memcache取值</td>
+                <td><?php echo $memcache->get('memcache') ?> </td>
               </tr>
             </table>
             <div>
