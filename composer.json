@@ -1,7 +1,6 @@
 {
     "require": {
         "php": "7.1.21",
-        "ext-mysql": "*",
         "ext-memcached": "*"
     }
 }
