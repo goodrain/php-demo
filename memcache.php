@@ -3,9 +3,6 @@ session_start();
 if (!isset($_SESSION['session_time'])) {   
     $_SESSION['session_time'] = time();
 }
-echo "session_time:".$_SESSION['session_time']."<br />";
-echo "now_time:".time()."<br />";
-echo "session_id:".session_id()."<br />";
 ?>
 
 <!DOCTYPE html>
@@ -61,12 +58,12 @@ echo "session_id:".session_id()."<br />";
                         <a href="/" target="_blank">首页</a>
                     </li>
                     <li>
-                        <a href="https://github.com/goodrain/dotnet-demo" target="_blank">Github</a>
+                        <a href="https://github.com/goodrain/php-demo" target="_blank">Github</a>
                     </li>
 
                     <li>
-                        <a href="https://www.rainbond.com/docs/stable/user-manual/app-creation/language-support/netcore.html"
-                            target="_blank">.NetCore语言支持文档</a>
+                        <a href="https://www.rainbond.com/docs/stable/user-manual/app-creation/language-support/php.html"
+                            target="_blank">PHP语言支持文档</a>
                     </li>
                     <li>
                         <a href="./mysqldemo.php" target="_blank">连接Mysql</a>
@@ -89,20 +86,20 @@ echo "session_id:".session_id()."<br />";
         <div id="main">
             <table>
               <tr>
-                <td>MEMCACHE_HOST</td>
-                <td><?php echo $_ENV['MEMCACHE_HOST'] ?></td>
+                <td>MEMCACHED_HOST</td>
+                <td><?php echo $_ENV['MEMCACHED_HOST'] ?></td>
               </tr>
               <tr>
-                <td>MEMCACHE_PORT</td>
-                <td><?php echo $_ENV['MEMCACHE_PORT'] ?></td>
+                <td>MEMCACHED_PORT</td>
+                <td><?php echo $_ENV['MEMCACHED_PORT'] ?></td>
               </tr>
               <tr>
                 <td>session_time</td>
-                <td><?php echo $_SESSION['session_time'] ?></td>
+                <td><?php echo date("Y-m-d h:i:s",$_SESSION['session_time']) ?></td>
               </tr>
               <tr>
                 <td>nowtime</td>
-                <td><?php echo time() ?></td>
+                <td><?php echo date("Y-m-d h:i:s",time()) ?></td>
               </tr>
               <tr>
                 <td>session_id</td>

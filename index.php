@@ -54,12 +54,12 @@
                         <a href="/" target="_blank">首页</a>
                     </li>
                     <li>
-                        <a href="https://github.com/goodrain/dotnet-demo" target="_blank">Github</a>
+                        <a href="https://github.com/goodrain/php-demo" target="_blank">Github</a>
                     </li>
 
                     <li>
-                        <a href="https://www.rainbond.com/docs/stable/user-manual/app-creation/language-support/netcore.html"
-                            target="_blank">.NetCore语言支持文档</a>
+                        <a href="https://www.rainbond.com/docs/stable/user-manual/app-creation/language-support/php.html"
+                            target="_blank">PHP语言支持文档</a>
                     </li>
                     <li>
                         <a href="./mysqldemo.php" target="_blank">连接Mysql</a>
