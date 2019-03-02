@@ -11,7 +11,8 @@ try {
     $memcache_info =$memcache->get('memcache');
 }catch(Exception $e) {
     $memcache_info = $e;
-    $session_info = ""
+    $session_info = "";
+}   
 ?>
 
 <!DOCTYPE html>
@@ -94,30 +95,30 @@ try {
     <main>
         <div id="main">
             <table>
-              <tr>
-                <td>MEMCACHED_HOST</td>
-                <td><?php echo $_ENV['MEMCACHED_HOST'] ?></td>
-              </tr>
-              <tr>
-                <td>MEMCACHED_PORT</td>
-                <td><?php echo $_ENV['MEMCACHED_PORT'] ?></td>
-              </tr>
-              <tr>
-                <td>session_time</td>
-                <td><?php echo date("Y-m-d h:i:s",$_SESSION['session_time']) ?></td>
-              </tr>
-              <tr>
-                <td>nowtime</td>
-                <td><?php echo date("Y-m-d h:i:s",time()) ?></td>
-              </tr>
-              <tr>
-                <td>session_info</td>
-                <td><?php echo $session_info ?></td>
-              </tr>
-              <tr>
-                <td>从memcache取值</td>
-                <td><?php echo $memcache_info ?> </td>
-              </tr>
+                <tr>
+                    <td>MEMCACHED_HOST</td>
+                    <td><?php echo $_ENV['MEMCACHED_HOST'] ?></td>
+                </tr>
+                <tr>
+                    <td>MEMCACHED_PORT</td>
+                    <td><?php echo $_ENV['MEMCACHED_PORT'] ?></td>
+                </tr>
+                <tr>
+                    <td>session_time</td>
+                    <td><?php echo date("Y-m-d h:i:s",$_SESSION['session_time']) ?></td>
+                </tr>
+                <tr>
+                    <td>nowtime</td>
+                    <td><?php echo date("Y-m-d h:i:s",time()) ?></td>
+                </tr>
+                <tr>
+                    <td>session_info</td>
+                    <td><?php echo $session_info ?></td>
+                </tr>
+                <tr>
+                    <td>从memcache取值</td>
+                    <td><?php echo $memcache_info ?> </td>
+                </tr>
             </table>
             <div>
     </main>
