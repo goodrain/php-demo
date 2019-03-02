@@ -1,6 +1,13 @@
 <?php
-  $title="PHP Demo For Rainbond"
+session_start();
+if (!isset($_SESSION['session_time'])) {   
+    $_SESSION['session_time'] = time();
+}
+echo "session_time:".$_SESSION['session_time']."<br />";
+echo "now_time:".time()."<br />";
+echo "session_id:".session_id()."<br />";
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -80,31 +87,29 @@
     </header>
     <main>
         <div id="main">
-            <div id="hero">
-                <h1><?php echo $title ?></h1>
-                <p></p>
-            </div>
-            <div id="action-buttons">
-                <a class="button primary big"
-                    href="https://www.rainbond.com/docs/stable/getting-started/installation-guide.html"
-                    target="_blank">私有化部署Rainbond</a>
-                <a class="button outline big" href="https://github.com/goodrain/dotnet-demo" target="_blank">View on
-                    Github</a>
-                <p>
-                    Version 5.0.3 Since January 28, 2019.<br />
-                    你值得拥有
-                </p>
-            </div>
-            <div class="message focus" data-component="message">
-                <span class="close small"></span>
-                <a class="button inverted small" href="https://www.rainbond.com" target="_blank">Rainbond </a>是开源的
-                <mark><a href="https://www.rainbond.com/docs/stable/architecture/design-concept.html#part-9693c61b747e20da"
-                        target="_blank">企业应用云操作系统</a></mark>，支撑企业应用的开发、架构、交付和运维的全流程，通过
-                <mark><a href="https://www.rainbond.com/docs/stable/architecture/design-concept.html#part-ef8ac41fb83350a"
-                        target="_blank">无侵入架构</a></mark>，无缝衔接各类企业应用，底层资源可以对接和管理IaaS、虚拟机和物理服务器。
-            </div>
-
-        </div>
+            <table>
+              <tr>
+                <td>MEMCACHE_HOST</td>
+                <td><?php echo $_ENV['MEMCACHE_HOST'] ?></td>
+              </tr>
+              <tr>
+                <td>MEMCACHE_PORT</td>
+                <td><?php echo $_ENV['MEMCACHE_PORT'] ?></td>
+              </tr>
+              <tr>
+                <td>session_time</td>
+                <td><?php echo $_SESSION['session_time'] ?></td>
+              </tr>
+              <tr>
+                <td>nowtime</td>
+                <td><?php echo time() ?></td>
+              </tr>
+              <tr>
+                <td>session_id</td>
+                <td><?php echo session_id() ?></td>
+              </tr>
+            </table>
+            <div>
     </main>
     <footer>
         <footer id="footer">
