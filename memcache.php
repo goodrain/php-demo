@@ -1,10 +1,16 @@
 <?php
-session_id("19216821213c65cedec65b0883238c278eeb573e077");
-session_start();
-if (!isset($_SESSION['session_time'])) {   
-    $_SESSION['session_time'] = time();
+function memcache_connect($host, $port)
+{
+    $memcache = new Memcache;
+    $memcache->connect($host, $port);
+    return $memcache;
 }
 try {
+    session_id("19216821213c65cedec65b0883238c278eeb573e077");
+    session_start();
+    if (!isset($_SESSION['session_time'])) {   
+        $_SESSION['session_time'] = time();
+    }
     $memcache = memcache_connect($_ENV['MEMCACHED_HOST'], $_ENV['MEMCACHED_PORT']);  
     $memcache->set('memcache', 'hello memcache');  
     $session_info = $memcache->get('19216821213c65cedec65b0883238c278eeb573e077');
