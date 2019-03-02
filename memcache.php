@@ -4,8 +4,14 @@ session_start();
 if (!isset($_SESSION['session_time'])) {   
     $_SESSION['session_time'] = time();
 }
-$memcache = memcache_connect($_ENV['MEMCACHED_HOST'], $_ENV['MEMCACHED_PORT']);  
-$memcache->set('memcache', 'hello memcache');  
+try {
+    $memcache = memcache_connect($_ENV['MEMCACHED_HOST'], $_ENV['MEMCACHED_PORT']);  
+    $memcache->set('memcache', 'hello memcache');  
+    $session_info = $memcache->get('19216821213c65cedec65b0883238c278eeb573e077');
+    $memcache_info =$memcache->get('memcache');
+}catch(Exception $e) {
+    $memcache_info = $e;
+    $session_info = ""
 ?>
 
 <!DOCTYPE html>
@@ -106,11 +112,11 @@ $memcache->set('memcache', 'hello memcache');
               </tr>
               <tr>
                 <td>session_info</td>
-                <td><?php echo $memcache->get('19216821213c65cedec65b0883238c278eeb573e077') ?></td>
+                <td><?php echo $session_info ?></td>
               </tr>
               <tr>
                 <td>从memcache取值</td>
-                <td><?php echo $memcache->get('memcache') ?> </td>
+                <td><?php echo $memcache_info ?> </td>
               </tr>
             </table>
             <div>
