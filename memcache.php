@@ -1,8 +1,8 @@
 <?php
 function memcache_connect($host, $port)
 {
-    $memcache = new Memcache;
-    $memcache->connect($host, $port);
+    $memcache = new Memcached();
+    $memcache->addServer($host, $port) or die ("Could not connect to memcached");
     return $memcache;
 }
 try {
