@@ -82,9 +82,6 @@ try {
                             target="_blank">PHP语言支持文档</a>
                     </li>
                     <li>
-                        <a href="./mysqldemo.php" target="_blank">连接Mysql</a>
-                    </li>
-                    <li>
                         <a href="./memcache.php" target="_blank">连接Memcache</a>
                     </li>
                 </ul>
