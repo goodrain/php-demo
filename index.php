@@ -88,7 +88,7 @@
                 <a class="button outline big" href="https://github.com/goodrain/dotnet-demo" target="_blank">View on
                     Github</a>
                 <p>
-                    Version 5.0.3 Since January 28, 2019.<br />
+                    Version 5.0.4 Since March 6, 2019.<br />
                     你值得拥有
                 </p>
             </div>
