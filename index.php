@@ -58,7 +58,7 @@
                     </li>
 
                     <li>
-                        <a href="https://www.rainbond.com/docs/stable/user-manual/app-creation/language-support/php.html"
+                        <a href="https://www.rainbond.com/docs/user-manual/app-creation/language-support/php/"
                             target="_blank">PHP语言支持文档</a>
                     </li>
                     <li>
@@ -83,7 +83,7 @@
             </div>
             <div id="action-buttons">
                 <a class="button primary big"
-                    href="https://www.rainbond.com/docs/stable/getting-started/installation-guide.html"
+                    href="https://www.rainbond.com/docs/quick-start/rainbond_install/"
                     target="_blank">私有化部署Rainbond</a>
                 <a class="button outline big" href="https://github.com/goodrain/dotnet-demo" target="_blank">View on
                     Github</a>
@@ -95,9 +95,9 @@
             <div class="message focus" data-component="message">
                 <span class="close small"></span>
                 <a class="button inverted small" href="https://www.rainbond.com" target="_blank">Rainbond </a>是开源的
-                <mark><a href="https://www.rainbond.com/docs/stable/architecture/design-concept.html#part-9693c61b747e20da"
+                <mark><a href="https://www.rainbond.com/docs/architecture/architecture/"
                         target="_blank">企业应用云操作系统</a></mark>，支撑企业应用的开发、架构、交付和运维的全流程，通过
-                <mark><a href="https://www.rainbond.com/docs/stable/architecture/design-concept.html#part-ef8ac41fb83350a"
+                <mark><a href="https://www.rainbond.com/docs/architecture/architecture/"
                         target="_blank">无侵入架构</a></mark>，无缝衔接各类企业应用，底层资源可以对接和管理IaaS、虚拟机和物理服务器。
             </div>
 
