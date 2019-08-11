@@ -14,8 +14,7 @@
     "prefer-lowest": false,
     "platform": {
         "php": "7.1.21",
-        "ext-memcached": "*",
-        "ext-memcached2222": "*"
+        "ext-memcached": "*"
     },
     "platform-dev": []
 }
